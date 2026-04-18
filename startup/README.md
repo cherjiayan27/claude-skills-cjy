@@ -305,22 +305,6 @@ brew install --cask arc
 
 ---
 
-## 19. Slack
-
-```bash
-brew install --cask slack
-```
-
----
-
-## 20. Zoom
-
-```bash
-brew install --cask zoom
-```
-
----
-
 ## Bonus: one-shot install with a Brewfile
 
 Once Homebrew is installed (step 1), you can skip most individual `brew install` commands by dropping a `Brewfile` in your home dir and running `brew bundle`.
@@ -354,10 +338,6 @@ cask "figma"
 
 # Browser
 cask "arc"
-
-# Comms
-cask "slack"
-cask "zoom"
 ```
 
 Then run:
