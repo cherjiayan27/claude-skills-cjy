@@ -27,4 +27,33 @@ A step-by-step skill for turning any book or dense reference PDF into a compound
 
 Includes full CLAUDE.md schema template, Memory.md template, index.md and log.md skeletons, and a copy-paste quick-start prompt. Refined via real-world ingestion of a 518-page framework book (127 interlinked wiki pages across 16 chapters).
 
-Also includes [CANONICAL-BRAIN.md](CANONICAL-BRAIN.md) — the multi-source extension for building a canonical knowledge brain from multiple books and reports, with cross-source linking discipline and sub-agent integration.
+---
+
+## CANONICAL-BRAIN.md — multi-source extension
+
+Once you have more than one source, use [CANONICAL-BRAIN.md](CANONICAL-BRAIN.md). It covers the architecture for holding multiple books + reports in a single vault without them polluting each other.
+
+**Core rule — canonical vs personal separation:**
+
+| | Canonical | Personal |
+|---|---|---|
+| What | Books, reports, whitepapers | PRDs, decisions, ideas, meeting notes |
+| Lives in | `~/Obsidian/brain/` | Anywhere else |
+| Write access | Read-only; updated via explicit ingest only | User writes freely |
+
+**Vault structure:**
+```
+~/Obsidian/brain/
+├── books/<book-slug>/          ← frameworks, concepts, metrics, roles
+└── reports/<report-slug-YYYY>/ ← concepts, metrics, benchmarks (year-versioned)
+```
+
+**The 4 cross-source disciplines:**
+1. **Grep-before-create** — search the entire vault before making a new page; extend existing pages rather than duplicating
+2. **Filename uniqueness across the vault** — `[[Net Revenue Retention]]` resolves regardless of which folder you're in
+3. **Extend, don't duplicate** — when a new source confirms an existing concept, update that page's Sources section
+4. **Disambiguate collisions** — if two sources use the same word differently, decide: merge into one page or split with distinguishing titles + cross-links
+
+**Sub-agent integration:** scope the brain reference to the specific agent (e.g. `pm-agent.md`), not the user-level `~/.claude/CLAUDE.md` — otherwise it fires on every Claude Code session regardless of topic.
+
+Includes 3 copy-paste quick-start prompts: adding a new source, registering the brain with a sub-agent, and starting a PM conversation grounded in the brain.
