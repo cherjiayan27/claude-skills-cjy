@@ -214,7 +214,32 @@ The first `claude` run will walk you through login.
 
 ---
 
-## 10. Claude Desktop
+## 10. Caveman (Claude Code plugin)
+
+Cuts Claude output tokens ~75%. Same technical accuracy, less word.
+
+Install the plugin:
+
+```bash
+claude plugin marketplace add JuliusBrussee/caveman && claude plugin install caveman@caveman
+```
+
+Make it always-on by adding to `~/.claude/CLAUDE.md` (create the file if it doesn't exist):
+
+```
+Terse like caveman. Technical substance exact. Only fluff die.
+Drop: articles, filler (just/really/basically), pleasantries, hedging.
+Fragments OK. Short synonyms. Code unchanged.
+Pattern: [thing] [action] [reason]. [next step].
+ACTIVE EVERY RESPONSE. No revert after many turns. No filler drift.
+Code/commits/PRs: normal. Off: "stop caveman" / "normal mode".
+```
+
+Trigger: `/caveman` (lite / full / ultra). Stop: `stop caveman`.
+
+---
+
+## 11. Claude Desktop
 
 ```bash
 brew install --cask claude
@@ -224,7 +249,7 @@ Launch and sign in.
 
 ---
 
-## 11. Obsidian
+## 12. Obsidian
 
 ```bash
 brew install --cask obsidian
@@ -232,7 +257,7 @@ brew install --cask obsidian
 
 ---
 
-## 12. Docker Desktop
+## 13. Docker Desktop
 
 ```bash
 brew install --cask docker
@@ -249,7 +274,7 @@ docker run hello-world
 
 ---
 
-## 13. Notion
+## 14. Notion
 
 ```bash
 brew install --cask notion
@@ -257,7 +282,7 @@ brew install --cask notion
 
 ---
 
-## 14. Linear (desktop)
+## 15. Linear (desktop)
 
 ```bash
 brew install --cask linear-linear
@@ -265,7 +290,7 @@ brew install --cask linear-linear
 
 ---
 
-## 15. Figma
+## 16. Figma
 
 ```bash
 brew install --cask figma
@@ -273,7 +298,7 @@ brew install --cask figma
 
 ---
 
-## 16. API testing — Postman or Bruno (pick one)
+## 17. API testing — Postman or Bruno (pick one)
 
 **Postman** (full-featured, cloud sync):
 
@@ -289,7 +314,7 @@ brew install --cask bruno
 
 ---
 
-## 17. TablePlus (database GUI)
+## 18. TablePlus (database GUI)
 
 ```bash
 brew install --cask tableplus
@@ -297,7 +322,7 @@ brew install --cask tableplus
 
 ---
 
-## 18. Arc browser
+## 19. Arc browser
 
 ```bash
 brew install --cask arc
@@ -353,6 +378,7 @@ This installs everything in one go. You'll still need to do these manually since
 - `nvm install --lts` (step 6)
 - `pyenv install 3.12` (step 7)
 - `npm install -g @anthropic-ai/claude-code` (step 9)
+- Caveman plugin + `~/.claude/CLAUDE.md` (step 10)
 
 ---
 
@@ -365,7 +391,8 @@ This installs everything in one go. You'll still need to do these manually since
 5. pyenv → Python
 6. `brew bundle` for everything else
 7. Claude Code (`npm install -g`)
-8. Open each app once to log in
+8. Caveman plugin
+9. Open each app once to log in
 
 ---
 
